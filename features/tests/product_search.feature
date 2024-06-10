@@ -7,6 +7,7 @@ Feature: Test Scenarios for Search functionality
     Then Product results for Car are shown
 
 
+  @smoke
   Scenario: User can filter by sale status Out of Stocks
     Given Open the main (log in) page
     When Log in to the page
