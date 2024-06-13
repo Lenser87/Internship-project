@@ -15,3 +15,10 @@ Feature: Test Scenarios for Search functionality
     Then Verify the right page opens
     When Filter by sale status of “Out of Stocks”
     Then Verify each product contains the Out of Stocks tag
+
+
+  Scenario: User can open map page(mobile simulation)
+    Given Open the main (log in) page
+    When Log in to the page
+    When Go to Map page
+    Then Verify Map page is opened

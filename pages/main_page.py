@@ -10,10 +10,14 @@ class MainPage(Page):
     OUT_OF_STOCK_BTN = (By.CSS_SELECTOR, "div[wized='priorityStatusOutOfStock'][class*='margin-bottom-8']")
     APPLY_FILTER_BTN = (By.XPATH, "//a[text()='Apply filter']")
     OUT_OF_STOCKS_FLD = (By.CSS_SELECTOR, "div[wized='projectMinimumPrice'][class='price-value']")
+    MAP_VIEW_BTN = (By.XPATH, "//div[text()='Map view']")
 
 
     def click_off_plan(self):
         self.wait_until_clickable_click(*self.OFF_PLAN_BTN)
+
+    def go_to_map_page(self):
+        self.wait_until_clickable_click(*self.MAP_VIEW_BTN)
 
     def verify_main_page(self):
         self.verify_text('Total projects', *self.TOTAL_PROJECTS_FLD)

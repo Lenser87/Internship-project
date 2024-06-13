@@ -14,6 +14,11 @@ def filter_out_of_stock(context):
     context.app.main_page.filter_out_of_stock()
 
 
+@when("Go to Map page")
+def go_to_map_page(context):
+    context.app.main_page.go_to_map_page()
+
+
 @then("Verify the right page opens")
 def verify_main_page(context):
     context.app.main_page.verify_main_page()
